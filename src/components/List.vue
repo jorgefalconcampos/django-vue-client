@@ -67,7 +67,7 @@ export default {
     methods: {
         findAll() {
 
-            fetch("http://127.0.0.1:9000/api/element/")
+            fetch("http://127.0.0.1:8000/api/element/")
                 .then(res => res.json())
                 .then(res => this.elements = res)
         }

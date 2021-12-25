@@ -1,14 +1,14 @@
 <template>
   <div id="app">
     <Header/>
-    <HolaMundo/>
+    <!-- <HolaMundo/> -->
     <List/>
     <Detail/>
   </div>
 </template>
 
 <script>
-import HolaMundo from './components/HolaMundo.vue';
+// import HolaMundo from './components/HolaMundo.vue';
 import List from './components/List.vue';
 import Detail from './components/Detail.vue';
 import Header from './components/Header.vue'
@@ -16,7 +16,7 @@ import Header from './components/Header.vue'
 export default {
   name: 'App',
   components: {
-    HolaMundo,
+    // HolaMundo,
     List,
     Detail,
     Header

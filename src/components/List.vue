@@ -1,40 +1,23 @@
 <template>
     <div class="container">
 
-        <b-table striped hover :items="elements" :fields="fields">
-        </b-table>
-
-        <div class="box" v-for="e in elements" v-bind:key="e.id">
-
-            <router-link :to=" '/detail/' + e.id ">
-                <b-card
-                    :title="e.title"
-                    img-alt="Image"
-                    img-top
-                    tag="article"
-                    style="max-width: 20rem;"
-                    class="mb-2"
-                >
-
-                <b-card-text>
-
-                    {{e.description}}
-                </b-card-text>
-
-                <b-button href="#" variant="primary">Go somewhere</b-button>
-
-                </b-card>
-            </router-link>                        
-        </div>
+        <!-- <b-table striped hover :items="elements" :fields="fields">
+        </b-table> -->
+        <ListDefault :elementsList="elements" />
     </div>
 </template>
 
 <script>
+
+import ListDefault from '../components/partials/_ListDefault.vue';
+
 export default {
+    components: {
+        ListDefault,
+    },
 
     created() {
         this.findAll();
-
     },
     data() {
         return {
@@ -63,13 +46,13 @@ export default {
                 
                 
             ],
-            elements: ["Uno", "Dos", "Tres"]
+            elements: []
         };
     },
     methods: {
         findAll() {
 
-            fetch("http://127.0.0.1:8000/api/element/")
+            fetch("http://127.0.0.1:8000/api/element/?format=json")
                 .then(res => res.json())
                 .then(res => this.elements = res)
         }

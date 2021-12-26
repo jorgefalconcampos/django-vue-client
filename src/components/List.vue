@@ -6,24 +6,26 @@
 
         <div class="box" v-for="e in elements" v-bind:key="e.id">
 
-            <b-card
-                :title="e.title"
-                img-alt="Image"
-                img-top
-                tag="article"
-                style="max-width: 20rem;"
-                class="mb-2"
-            >
+            <router-link :to=" '/detail/' + e.id ">
+                <b-card
+                    :title="e.title"
+                    img-alt="Image"
+                    img-top
+                    tag="article"
+                    style="max-width: 20rem;"
+                    class="mb-2"
+                >
+
                 <b-card-text>
 
                     {{e.description}}
                 </b-card-text>
 
                 <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-                        
-        </div>
 
+                </b-card>
+            </router-link>                        
+        </div>
     </div>
 </template>
 

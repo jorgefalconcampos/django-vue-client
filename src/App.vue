@@ -1,25 +1,27 @@
 <template>
   <div id="app">
     <Header/>
+    <Categories/>
     <!-- <HolaMundo/> -->
+
+    <router-link to="/">Lista</router-link>
+    <router-link to="/detail">Detail</router-link>
+
+    <router-view></router-view>
     <List/>
-    <Detail/>
   </div>
 </template>
 
 <script>
 // import HolaMundo from './components/HolaMundo.vue';
-import List from './components/List.vue';
-import Detail from './components/Detail.vue';
 import Header from './components/Header.vue'
+import Categories from './components/Types.vue'
 
 export default {
   name: 'App',
   components: {
-    // HolaMundo,
-    List,
-    Detail,
-    Header
+    Header,
+    Categories,
   }
 }
 </script>

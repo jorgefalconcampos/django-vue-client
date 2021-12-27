@@ -1,10 +1,7 @@
 <template>
     <div class="container">
-
         <ListDefault :elementsList="elements" />
-
         <h1>Listado de categorías</h1>
-
         <!-- <div class="box" v-for="e in elements" v-bind:key="e.id">
             <router-link :to=" '/detail/' + e.id ">
                 <b-card
@@ -35,6 +32,7 @@ export default {
 
     created() {
         this.findAll();
+        console.log("find all from created")
 
     },
     data() {
@@ -49,6 +47,12 @@ export default {
                 .then(res => res.json())
                 .then(res => this.elements = res)
         }
-    }, 
+    },
+    watch: {
+        "$route.params.id"(){
+            this.findAll();
+            console.log("find all from watcher")
+        }
+    }
 }
 </script>

@@ -24,6 +24,7 @@ const routes = [
   {path: '/', component: List},
   {path: '/detail/:id', component: Detail},
   {path: '/category/:id/elements', component: ListCategory},
+  {path: '/type/:id/elements', component: ListCategory},
 ]
 
 const router = new VueRouter({

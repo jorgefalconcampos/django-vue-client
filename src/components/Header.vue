@@ -19,7 +19,7 @@
             <b-nav-item-dropdown text="Categories" right>
                 <b-dropdown-item v-for="c in categories" v-bind:key="c.id" :to="'/category/' + c.id + '/elements'">
                     {{c.title}}
-                </b-dropdown-item>
+                </b-dropdown-item> 
             </b-nav-item-dropdown>
 
 

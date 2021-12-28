@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="">
         <ListDefault :elementsList="elements" />
         <h1>Listado de tipos</h1>
 

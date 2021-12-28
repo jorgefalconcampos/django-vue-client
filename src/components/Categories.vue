@@ -1,8 +1,9 @@
 <template>
     <div>
         <b-list-group>
-            <div class="box" v-for="c in categories" v-bind:key="c.id">
-                <b-list-group-item button>
+            <div class="box">
+                <h5>Categorías</h5>
+                <b-list-group-item button v-for="c in categories" v-bind:key="c.id">
                     <router-link :to=" '/category/' + c.id + '/category' ">
                         {{c.title}}                 
                     </router-link>                        

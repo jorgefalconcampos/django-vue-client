@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="">
         <ListDefault :elementsList="elements" />
         <h1>Listado de categorías</h1>
         <!-- <div class="box" v-for="e in elements" v-bind:key="e.id">

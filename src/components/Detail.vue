@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="">
             <b-card :title="element.title" class="mb-2">
                 <b-card-text>{{element.description}}</b-card-text>
                 <b-button href="#" variant="primary">Go somewhere</b-button>
